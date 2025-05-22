@@ -1,5 +1,5 @@
 node_modules/
 test-results/
-allure/report/
+allure-report/
 allure-results/
 playwright-report/
