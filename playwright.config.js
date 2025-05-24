@@ -12,7 +12,7 @@ const config = {
     timeout: 5000
   },
   
-  reporter: [['allure-playwright'], ['html']],
+  reporter: [['list'], ['allure-playwright', { outputFolder: 'allure-results' }], ['html']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 
