@@ -13,7 +13,7 @@ const config = {
     timeout: 5000
   },
   
-  reporter: [['list'], ['allure-playwright', { outputFolder: 'allure-results' }], ['html']],
+  reporter: [['list'], ['allure-playwright', { outputFolder: 'allure-results' }], ['html', { outputFolder: 'playwright-report', open: 'never' }]],
   projects : [
     {
       name : 'safari',
