@@ -85,14 +85,14 @@ jobs:
           name: playwright-report
           path: playwright-report
 
-      # # 🟢 Deploy cả 2 report lên GitHub Pages
-      # - name: Deploy Reports to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./combined-report
-      #     publish_branch: gh-pages
-      #     force_orphan: true
+      # 🟢 Deploy cả 2 report lên GitHub Pages
+      - name: Deploy Reports to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./combined-report/${{ github.run_number }}
+          publish_branch: gh-pages
+          force_orphan: true
 
       # 🟢 Gửi email báo kết quả kèm link report online
       - name: Send email with report links
