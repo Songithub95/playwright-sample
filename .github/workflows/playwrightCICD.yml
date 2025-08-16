@@ -116,7 +116,7 @@ jobs:
           subject: "[${{ job.status }}] Test Report - ${{ github.workflow }} #${{ github.run_number }}"
           to: ${{ secrets.SMTP_USERNAME }}
           from: GitHub Actions ${{ secrets.SMTP_USERNAME }}
-          content_type: html
+          content_type: text/html
           body: |
             Hello Team,
             Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: ${{ job.status }}
@@ -135,24 +135,24 @@ jobs:
           status: custom
           custom_payload: |
             {
-              "text": "🔔 *${{ github.workflow }}* #${{ github.run_number }} - *${{ job.status }}*",
+              "text": ":bell: *${{ github.workflow }}* #${{ github.run_number }} - ${{ job.status == 'success' && ':white_check_mark: Success' || job.status == 'failure' && ':x: Failure' || ':warning: ' + job.status }}",
               "attachments": [
                 {
                   "color": "${{ job.status == 'success' && 'good' || job.status == 'failure' && 'danger' || 'warning' }}",
                   "fields": [
                     {
                       "title": "Build URL",
-                      "value": "${{ env.BUILD_URL }}",
+                      "value": "<${{ env.BUILD_URL }}|View Build>",
                       "short": false
                     },
                     {
                       "title": "📄 Playwright HTML Report",
-                      "value": "https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/",
+                      "value": "<https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/|Playwright Report>",
                       "short": false
                     },
                     {
                       "title": "📊 Allure Report",
-                      "value": "https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/",
+                      "value": "<https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/|Allure Report>",
                       "short": false
                     }
                   ]
