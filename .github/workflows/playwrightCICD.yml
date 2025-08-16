@@ -81,6 +81,41 @@ jobs:
           cp -r playwright-report/* combined-report/playwright/ || true
         if: always()
 
+      # 🟢 Extract stats từ Allure và Playwright
+      - name: Extract test stats
+        if: always()
+        run: |
+          echo "📊 Extracting stats..."
+          # Allure summary.json
+          if [ -f allure-report/widgets/summary.json ]; then
+            ALLURE_TOTAL=$(jq '.statistic.total' allure-report/widgets/summary.json)
+            ALLURE_PASSED=$(jq '.statistic.passed' allure-report/widgets/summary.json)
+            ALLURE_FAILED=$(jq '.statistic.failed' allure-report/widgets/summary.json)
+            ALLURE_BROKEN=$(jq '.statistic.broken' allure-report/widgets/summary.json)
+            ALLURE_SKIPPED=$(jq '.statistic.skipped' allure-report/widgets/summary.json)
+            ALLURE_FLAKY=$(jq '.statistic.flaky' allure-report/widgets/summary.json)
+            echo "ALLURE_TOTAL=$ALLURE_TOTAL" >> $GITHUB_ENV
+            echo "ALLURE_PASSED=$ALLURE_PASSED" >> $GITHUB_ENV
+            echo "ALLURE_FAILED=$ALLURE_FAILED" >> $GITHUB_ENV
+            echo "ALLURE_BROKEN=$ALLURE_BROKEN" >> $GITHUB_ENV
+            echo "ALLURE_SKIPPED=$ALLURE_SKIPPED" >> $GITHUB_ENV
+            echo "ALLURE_FLAKY=$ALLURE_FLAKY" >> $GITHUB_ENV
+          fi
+
+          # Playwright report.json
+          if [ -f playwright-report/report.json ]; then
+            PW_TOTAL=$(jq '.stats.total' playwright-report/report.json)
+            PW_PASSED=$(jq '.stats.passed' playwright-report/report.json)
+            PW_FAILED=$(jq '.stats.failed' playwright-report/report.json)
+            PW_FLAKY=$(jq '.stats.flaky' playwright-report/report.json)
+            PW_SKIPPED=$(jq '.stats.skipped' playwright-report/report.json)
+            echo "PW_TOTAL=$PW_TOTAL" >> $GITHUB_ENV
+            echo "PW_PASSED=$PW_PASSED" >> $GITHUB_ENV
+            echo "PW_FAILED=$PW_FAILED" >> $GITHUB_ENV
+            echo "PW_FLAKY=$PW_FLAKY" >> $GITHUB_ENV
+            echo "PW_SKIPPED=$PW_SKIPPED" >> $GITHUB_ENV
+          fi
+
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -111,7 +146,7 @@ jobs:
           allure_history: allure-history
           allure_results: build/allure-results
 
-      # 🟢 Deploy cả 2 report lên GitHub Pages (cố định)
+      # 🟢 Deploy cả 2 report lên GitHub Pages
       - name: Deploy Reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -121,7 +156,7 @@ jobs:
           force_orphan: true
         if: always()
 
-      # 🟢 Gửi email báo kết quả kèm link report online
+      # 🟢 Email notification
       - name: Send email with report links
         uses: dawidd6/action-send-mail@v3
         with:
@@ -137,27 +172,40 @@ jobs:
             <html>
               <body>
                   <p>Hello Team,</p>
-
-                  <p>
-                    Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: 
-                    <b style="color:
-                      ${{ job.status == 'success' && 'green' || job.status == 'failure' && 'red' || 'orange' }};
-                    ">
+                  <p>Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái:
+                    <b style="color:${{ job.status == 'success' && 'green' || job.status == 'failure' && 'red' || 'orange' }};">
                       ${{ job.status }}
                     </b>
+                  </p>
+
+                  <h3>📄 Playwright Stats:</h3>
+                  <p>
+                    Total: ${{ env.PW_TOTAL }} |
+                    Passed: ${{ env.PW_PASSED }} |
+                    Failed: ${{ env.PW_FAILED }} |
+                    Flaky: ${{ env.PW_FLAKY }} |
+                    Skipped: ${{ env.PW_SKIPPED }}
+                  </p>
+
+                  <h3>📊 Allure Stats:</h3>
+                  <p>
+                    Total: ${{ env.ALLURE_TOTAL }} |
+                    Passed: ${{ env.ALLURE_PASSED }} |
+                    Failed: ${{ env.ALLURE_FAILED }} |
+                    Broken: ${{ env.ALLURE_BROKEN }} |
+                    Flaky: ${{ env.ALLURE_FLAKY }} |
+                    Skipped: ${{ env.ALLURE_SKIPPED }}
                   </p>
 
                   <p>
                     🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/" target="_blank">Playwright Report</a><br/>
                     🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/" target="_blank">Allure Report</a>
                   </p>
-
-                  <p>Trân trọng,<br/>GitHub Actions</p>
-                </body>
-              </html>
+              </body>
+            </html>
         if: always()
 
-      # 🟢 Gửi thông báo Slack với link report trực tiếp
+      # 🟢 Slack Notification
       - name: Slack Notification
         uses: 8398a7/action-slack@v3
         with:
@@ -175,13 +223,18 @@ jobs:
                       "short": false
                     },
                     {
-                      "title": "📄 Playwright HTML Report",
-                      "value": "<https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/|Playwright Report>",
+                      "title": "📄 Playwright Stats",
+                      "value": "Total: ${{ env.PW_TOTAL }} | Passed: ${{ env.PW_PASSED }} | Failed: ${{ env.PW_FAILED }} | Flaky: ${{ env.PW_FLAKY }} | Skipped: ${{ env.PW_SKIPPED }}",
                       "short": false
                     },
                     {
-                      "title": "📊 Allure Report",
-                      "value": "<https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/|Allure Report>",
+                      "title": "📊 Allure Stats",
+                      "value": "Total: ${{ env.ALLURE_TOTAL }} | Passed: ${{ env.ALLURE_PASSED }} | Failed: ${{ env.ALLURE_FAILED }} | Broken: ${{ env.ALLURE_BROKEN }} | Flaky: ${{ env.ALLURE_FLAKY }} | Skipped: ${{ env.ALLURE_SKIPPED }}",
+                      "short": false
+                    },
+                    {
+                      "title": "Reports",
+                      "value": "<https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/|Playwright Report> | <https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/|Allure Report>",
                       "short": false
                     }
                   ]
