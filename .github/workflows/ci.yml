@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       TEST_SUITE:
-        description: "Chọn test suite cần chạy"
+        description: "Select test suite to run"
         required: true
         default: "all"
         type: choice
