@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HOME: ${{ github.workspace }}
-      START_TIME: ${{ github.event.workflow_run?.run_started_at || github.event.created_at || github.run_started_at }}
+      START_TIME: ${{ github.event.workflow_run.run_started_at || github.event.created_at || github.run_started_at }}
 
     steps:
       - name: Checkout repository
