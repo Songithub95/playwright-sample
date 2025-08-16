@@ -139,7 +139,7 @@ jobs:
       - name: Slack Notification
         uses: 8398a7/action-slack@v3
         with:
-          status: ${{ job.status }}
+          status: custom
           custom_payload: |
             {
               "text": "🔔 *${{ github.workflow }}* #${{ github.run_number }} - *${{ job.status }}*",
