@@ -135,7 +135,7 @@ jobs:
           status: custom
           custom_payload: |
             {
-              "text": ":bell: *${{ github.workflow }}* #${{ github.run_number }} - ${{ job.status == 'success' && ':white_check_mark: Success' || job.status == 'failure' && ':x: Failure' || ':warning: ' + job.status }}",
+              "text": "🔔 *${{ github.workflow }}* #${{ github.run_number }} - *${{ job.status }}*",
               "attachments": [
                 {
                   "color": "${{ job.status == 'success' && 'good' || job.status == 'failure' && 'danger' || 'warning' }}",
