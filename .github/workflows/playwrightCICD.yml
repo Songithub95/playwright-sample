@@ -69,9 +69,10 @@ jobs:
 
       - name: Prepare combined report folder
         run: |
-          mkdir -p combined-report
-          cp -r allure-report combined-report/allure
-          cp -r playwright-report combined-report/playwright
+          mkdir -p combined-report/allure
+          mkdir -p combined-report/playwright
+          cp -r allure-report/* combined-report/allure/ || true
+          cp -r playwright-report/* combined-report/playwright/ || true
 
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
@@ -85,12 +86,12 @@ jobs:
           name: playwright-report
           path: playwright-report
 
-      # 🟢 Deploy cả 2 report lên GitHub Pages
+      # 🟢 Deploy cả 2 report lên GitHub Pages (cố định)
       - name: Deploy Reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./combined-report/${{ github.run_number }}
+          publish_dir: ./combined-report
           publish_branch: gh-pages
           force_orphan: true
 
@@ -110,10 +111,11 @@ jobs:
             Hello Team,
 
             Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: ${{ job.status }}
-            🔗 Xem Allure Report "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure/" 
-            🔗 Xem Playwright HTML Report "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/playwright/" 
 
-            Trân trọng,
+            🔗 Xem Allure Report: <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure/">Allure Report</a>  
+            🔗 Xem Playwright HTML Report: <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/playwright/">Playwright Report</a>  
+
+            Trân trọng,  
             GitHub Actions
 
       # 🟢 Gửi thông báo Slack format giống Jenkins
