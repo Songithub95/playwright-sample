@@ -128,11 +128,12 @@ jobs:
 
             Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: ${{ job.status }}
 
-            🔗 Xem Allure Report: <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure/">Allure Report</a>  
-            🔗 Xem Playwright HTML Report: <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/playwright/">Playwright Report</a>  
+            🔗 Xem Allure Report -> "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure/" 
+            🔗 Xem Playwright HTML Report -> "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/playwright/"
 
             Trân trọng,  
             GitHub Actions
+        if: always()
 
       # 🟢 Gửi thông báo Slack format giống Jenkins
       - name: Slack Notification
@@ -167,3 +168,4 @@ jobs:
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()
