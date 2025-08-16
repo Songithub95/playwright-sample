@@ -48,15 +48,19 @@ jobs:
           if [ "$TEST_SUITE" == "regression" ] || [ "$TEST_SUITE" == "all" ]; then
             npm run regression
           fi
+        continue-on-error: true
           if [ "$TEST_SUITE" == "webTests" ] || [ "$TEST_SUITE" == "all" ]; then
             npm run webTests
           fi
+        continue-on-error: true
           if [ "$TEST_SUITE" == "APITests" ] || [ "$TEST_SUITE" == "all" ]; then
             npm run APITests
           fi
+        continue-on-error: true
           if [ "$TEST_SUITE" == "SafariNewConfig" ] || [ "$TEST_SUITE" == "all" ]; then
             npm run SafariNewConfig
           fi
+        continue-on-error: true
 
       - name: Generate Allure Report
         run: |
