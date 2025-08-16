@@ -129,19 +129,32 @@ jobs:
           server_port: ${{ secrets.SMTP_PORT }}
           username: ${{ secrets.SMTP_USERNAME }}
           password: ${{ secrets.SMTP_PASSWORD }}
-          subject: "[${{ job.status }}] Test Report - ${{ github.workflow }} #${{ github.run_number }}"
+          subject: "${{ job.status == 'success' && '✅' || job.status == 'failure' && '❌' || '⚠️' }} [${{ job.status }}] Test Report - ${{ github.workflow }} #${{ github.run_number }}"
           to: ${{ secrets.SMTP_USERNAME }}
           from: GitHub Actions ${{ secrets.SMTP_USERNAME }}
           content_type: text/html
           body: |
-            Hello Team,
-            Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: ${{ job.status }}
+            <html>
+              <body>
+                  <p>Hello Team,</p>
 
-            🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/">Playwright HTML Report</a><br/>
-            🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/">Allure Report</a>
+                  <p>
+                    Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: 
+                    <b style="color:
+                      ${{ job.status == 'success' && 'green' || job.status == 'failure' && 'red' || 'orange' }};
+                    ">
+                      ${{ job.status }}
+                    </b>
+                  </p>
 
-            Trân trọng,<br/>
-            GitHub Actions
+                  <p>
+                    🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/" target="_blank">Playwright Report</a><br/>
+                    🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/" target="_blank">Allure Report</a>
+                  </p>
+
+                  <p>Trân trọng,<br/>GitHub Actions</p>
+                </body>
+              </html>
         if: always()
 
       # 🟢 Gửi thông báo Slack với link report trực tiếp
