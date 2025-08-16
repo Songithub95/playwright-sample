@@ -133,7 +133,7 @@ jobs:
           to: ${{ secrets.SMTP_USERNAME }}
           from: GitHub Actions ${{ secrets.SMTP_USERNAME }}
           content_type: text/html
-          body: |
+          body: >
             <html>
               <body>
                   <p>Hello Team,</p>
