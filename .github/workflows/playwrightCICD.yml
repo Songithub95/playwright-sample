@@ -20,6 +20,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
     env:
       HOME: ${{ github.workspace }}
       TEST_SUITE: ${{ github.event.inputs.TEST_SUITE || 'all' }}
@@ -67,40 +70,30 @@ jobs:
         run: |
           npx allure generate allure-results --clean -o allure-report
 
+      - name: Derive repo name for Pages URLs
+        run: echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+
       - name: Prepare combined report folder
         run: |
           mkdir -p combined-report/allure
           mkdir -p combined-report/playwright
           cp -r allure-report/* combined-report/allure/ || true
           cp -r playwright-report/* combined-report/playwright/ || true
-
-      - name: Load test report history
-        uses: actions/checkout@v3
         if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Build test report
-        uses: simple-elf/allure-report-action@v1.7
-        if: always()
-        with:
-          gh_pages: gh-pages
-          allure_history: allure-history
-          allure_results: build/allure-results
 
       - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: allure-report
+        if: always()
 
       - name: Upload Playwright HTML Report Artifact
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report
+        if: always()
 
       # 🟢 Deploy cả 2 report lên GitHub Pages (cố định)
       - name: Deploy Reports to GitHub Pages
@@ -110,6 +103,7 @@ jobs:
           publish_dir: ./combined-report
           publish_branch: gh-pages
           force_orphan: true
+        if: always()
 
       # 🟢 Gửi email báo kết quả kèm link report online
       - name: Send email with report links
@@ -122,20 +116,19 @@ jobs:
           subject: "[${{ job.status }}] Test Report - ${{ github.workflow }} #${{ github.run_number }}"
           to: ${{ secrets.SMTP_USERNAME }}
           from: GitHub Actions ${{ secrets.SMTP_USERNAME }}
-          content_type: text/html
+          content_type: html
           body: |
             Hello Team,
-
             Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: ${{ job.status }}
 
-            🔗 Xem Allure Report -> "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure/" 
-            🔗 Xem Playwright HTML Report -> "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/playwright/"
+            🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/">Playwright HTML Report</a><br/>
+            🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/">Allure Report</a>
 
-            Trân trọng,  
+            Trân trọng,<br/>
             GitHub Actions
         if: always()
 
-      # 🟢 Gửi thông báo Slack format giống Jenkins
+      # 🟢 Gửi thông báo Slack với link report trực tiếp
       - name: Slack Notification
         uses: 8398a7/action-slack@v3
         with:
@@ -145,7 +138,7 @@ jobs:
               "text": "🔔 *${{ github.workflow }}* #${{ github.run_number }} - *${{ job.status }}*",
               "attachments": [
                 {
-                  "color": "${{ job.status == 'success' && '#36a64f' || '#ff0000' }}",
+                  "color": "${{ job.status == 'success' && 'good' || job.status == 'failure' && 'danger' || 'warning' }}",
                   "fields": [
                     {
                       "title": "Build URL",
@@ -153,13 +146,13 @@ jobs:
                       "short": false
                     },
                     {
-                      "title": "📄 HTML Report",
-                      "value": "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/playwright/",
+                      "title": "📄 Playwright HTML Report",
+                      "value": "https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/",
                       "short": false
                     },
                     {
                       "title": "📊 Allure Report",
-                      "value": "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/allure/",
+                      "value": "https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/",
                       "short": false
                     }
                   ]
