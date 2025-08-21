@@ -81,12 +81,10 @@ jobs:
           cp -r playwright-report/* combined-report/playwright/ || true
         if: always()
 
-      # 🟢 Extract stats từ Allure và Playwright
       - name: Extract test stats
         if: always()
         run: |
           echo "📊 Extracting stats..."
-          # Allure summary.json
           if [ -f allure-report/widgets/summary.json ]; then
             ALLURE_TOTAL=$(jq '.statistic.total' allure-report/widgets/summary.json)
             ALLURE_PASSED=$(jq '.statistic.passed' allure-report/widgets/summary.json)
@@ -102,7 +100,6 @@ jobs:
             echo "ALLURE_FLAKY=$ALLURE_FLAKY" >> $GITHUB_ENV
           fi
 
-          # Playwright report.json
           if [ -f playwright-report/report.json ]; then
             PW_TOTAL=$(jq '.stats.total' playwright-report/report.json)
             PW_PASSED=$(jq '.stats.passed' playwright-report/report.json)
@@ -146,7 +143,6 @@ jobs:
           allure_history: allure-history
           allure_results: build/allure-results
 
-      # 🟢 Deploy cả 2 report lên GitHub Pages
       - name: Deploy Reports to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -156,7 +152,6 @@ jobs:
           force_orphan: true
         if: always()
 
-      # 🟢 Email notification
       - name: Send email with report links
         uses: dawidd6/action-send-mail@v3
         with:
@@ -167,45 +162,34 @@ jobs:
           subject: "${{ job.status == 'success' && '✅' || job.status == 'failure' && '❌' || '⚠️' }} [${{ job.status }}] Test Report - ${{ github.workflow }} #${{ github.run_number }}"
           to: ${{ secrets.SMTP_USERNAME }}
           from: GitHub Actions ${{ secrets.SMTP_USERNAME }}
-          content_type: text/html
-          body: >
-            <html>
-              <body>
-                  <p>Hello Team,</p>
-                  <p>Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái:
-                    <b style="color:${{ job.status == 'success' && 'green' || job.status == 'failure' && 'red' || 'orange' }};">
-                      ${{ job.status }}
-                    </b>
-                  </p>
+          content_type: text/plain
+          body: |
+            Hello Team,
 
-                  <h3>📄 Playwright Stats:</h3>
-                  <p>
-                    Total: ${{ env.PW_TOTAL }} |
-                    Passed: ${{ env.PW_PASSED }} |
-                    Failed: ${{ env.PW_FAILED }} |
-                    Flaky: ${{ env.PW_FLAKY }} |
-                    Skipped: ${{ env.PW_SKIPPED }}
-                  </p>
+            Build workflow #${{ github.run_number }} đã hoàn thành với trạng thái: ${{ job.status }}
 
-                  <h3>📊 Allure Stats:</h3>
-                  <p>
-                    Total: ${{ env.ALLURE_TOTAL }} |
-                    Passed: ${{ env.ALLURE_PASSED }} |
-                    Failed: ${{ env.ALLURE_FAILED }} |
-                    Broken: ${{ env.ALLURE_BROKEN }} |
-                    Flaky: ${{ env.ALLURE_FLAKY }} |
-                    Skipped: ${{ env.ALLURE_SKIPPED }}
-                  </p>
+            📄 Playwright Stats:
+            Total: ${{ env.PW_TOTAL }}
+            Passed: ${{ env.PW_PASSED }}
+            Failed: ${{ env.PW_FAILED }}
+            Flaky: ${{ env.PW_FLAKY }}
+            Skipped: ${{ env.PW_SKIPPED }}
 
-                  <p>
-                    🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/" target="_blank">Playwright Report</a><br/>
-                    🔗 <a href="https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/" target="_blank">Allure Report</a>
-                  </p>
-              </body>
-            </html>
+            📊 Allure Stats:
+            Total: ${{ env.ALLURE_TOTAL }}
+            Passed: ${{ env.ALLURE_PASSED }}
+            Failed: ${{ env.ALLURE_FAILED }}
+            Broken: ${{ env.ALLURE_BROKEN }}
+            Flaky: ${{ env.ALLURE_FLAKY }}
+            Skipped: ${{ env.ALLURE_SKIPPED }}
+
+            🔗 Playwright Report:
+            https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/
+
+            🔗 Allure Report:
+            https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/
         if: always()
 
-      # 🟢 Slack Notification
       - name: Slack Notification
         uses: 8398a7/action-slack@v3
         with:
@@ -234,7 +218,7 @@ jobs:
                     },
                     {
                       "title": "Reports",
-                      "value": "<https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/|Playwright Report> | <https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/|Allure Report>",
+                      "value": "Playwright: https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/ | Allure: https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/",
                       "short": false
                     }
                   ]
