@@ -213,7 +213,7 @@ jobs:
                     },
                     {
                       "title": "📊 Allure Stats",
-                      "value": "Total: ${{ env.ALLURE_TOTAL }} | Passed: ${{ env.ALLURE_PASSED }} | Failed: ${{ env.ALLURE_FAILED }} | Broken: ${{ env.ALLURE_BROKEN }} | Flaky: ${{ env.ALLURE_UNKNOWN }} | Skipped: ${{ env.ALLURE_SKIPPED }}",
+                      "value": "Total: ${{ env.ALLURE_TOTAL }} | Passed: ${{ env.ALLURE_PASSED }} | Failed: ${{ env.ALLURE_FAILED }} | Broken: ${{ env.ALLURE_BROKEN }} | Unknown: ${{ env.ALLURE_UNKNOWN }} | Skipped: ${{ env.ALLURE_SKIPPED }}",
                       "short": false
                     },
                     {
