@@ -218,7 +218,7 @@ jobs:
                     },
                     {
                       "title": "Reports",
-                      "value": "Playwright: https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/ | Allure: https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/",
+                      "value": "<https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/playwright/|Playwright Report> | <https://${{ github.repository_owner }}.github.io/${{ env.REPO_NAME }}/allure/|Allure Report>",                      
                       "short": false
                     }
                   ]
