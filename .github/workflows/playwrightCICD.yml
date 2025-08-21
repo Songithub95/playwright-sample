@@ -44,7 +44,7 @@ jobs:
 
       - name: Clean old reports
         run: |
-          rm -rf allure-results playwright-report combined-report || true
+          rm -rf allure-results allure-report playwright-report combined-report || true
 
       - name: Run regression tests
         if: ${{ env.TEST_SUITE == 'regression' || env.TEST_SUITE == 'all' }}
