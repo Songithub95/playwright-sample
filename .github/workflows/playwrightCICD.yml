@@ -97,7 +97,7 @@ jobs:
             ALLURE_FAILED=$(jq '.statistic.failed' allure-report/widgets/summary.json)
             ALLURE_BROKEN=$(jq '.statistic.broken' allure-report/widgets/summary.json)
             ALLURE_SKIPPED=$(jq '.statistic.skipped' allure-report/widgets/summary.json)
-            ALLURE_UNKNOWN=$(jq '.statistic.flaky' allure-report/widgets/summary.json)
+            ALLURE_UNKNOWN=$(jq '.statistic.unknown' allure-report/widgets/summary.json)
             echo "ALLURE_TOTAL=$ALLURE_TOTAL" >> $GITHUB_ENV
             echo "ALLURE_PASSED=$ALLURE_PASSED" >> $GITHUB_ENV
             echo "ALLURE_FAILED=$ALLURE_FAILED" >> $GITHUB_ENV
