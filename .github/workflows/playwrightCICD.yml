@@ -49,22 +49,22 @@ jobs:
       - name: Run regression tests
         if: ${{ env.TEST_SUITE == 'regression' || env.TEST_SUITE == 'all' }}
         run: npm run regression
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Run webTests
         if: ${{ env.TEST_SUITE == 'webTests' || env.TEST_SUITE == 'all' }}
         run: npm run webTests
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Run API tests
         if: ${{ env.TEST_SUITE == 'APITests' || env.TEST_SUITE == 'all' }}
         run: npm run APITests
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Run SafariNewConfig tests
         if: ${{ env.TEST_SUITE == 'SafariNewConfig' || env.TEST_SUITE == 'all' }}
         run: npm run SafariNewConfig
-        continue-on-error: true
+        continue-on-error: false
 
       - name: Generate Playwright JSON Summary
         if: always()
