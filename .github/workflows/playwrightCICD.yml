@@ -91,13 +91,13 @@ jobs:
             ALLURE_FAILED=$(jq '.statistic.failed' allure-report/widgets/summary.json)
             ALLURE_BROKEN=$(jq '.statistic.broken' allure-report/widgets/summary.json)
             ALLURE_SKIPPED=$(jq '.statistic.skipped' allure-report/widgets/summary.json)
-            ALLURE_FLAKY=$(jq '.statistic.flaky' allure-report/widgets/summary.json)
+            ALLURE_UNKNOWN=$(jq '.statistic.flaky' allure-report/widgets/summary.json)
             echo "ALLURE_TOTAL=$ALLURE_TOTAL" >> $GITHUB_ENV
             echo "ALLURE_PASSED=$ALLURE_PASSED" >> $GITHUB_ENV
             echo "ALLURE_FAILED=$ALLURE_FAILED" >> $GITHUB_ENV
             echo "ALLURE_BROKEN=$ALLURE_BROKEN" >> $GITHUB_ENV
             echo "ALLURE_SKIPPED=$ALLURE_SKIPPED" >> $GITHUB_ENV
-            echo "ALLURE_FLAKY=$ALLURE_FLAKY" >> $GITHUB_ENV
+            echo "ALLURE_UNKNOWN=$ALLURE_UNKNOWN" >> $GITHUB_ENV
           fi
 
           if [ -f playwright-report/report.json ]; then
@@ -180,7 +180,7 @@ jobs:
             Passed: ${{ env.ALLURE_PASSED }}
             Failed: ${{ env.ALLURE_FAILED }}
             Broken: ${{ env.ALLURE_BROKEN }}
-            Flaky: ${{ env.ALLURE_FLAKY }}
+            Unknown: ${{ env.ALLURE_UNKNOWN }}
             Skipped: ${{ env.ALLURE_SKIPPED }}
 
             🔗 Playwright Report:
@@ -213,7 +213,7 @@ jobs:
                     },
                     {
                       "title": "📊 Allure Stats",
-                      "value": "Total: ${{ env.ALLURE_TOTAL }} | Passed: ${{ env.ALLURE_PASSED }} | Failed: ${{ env.ALLURE_FAILED }} | Broken: ${{ env.ALLURE_BROKEN }} | Flaky: ${{ env.ALLURE_FLAKY }} | Skipped: ${{ env.ALLURE_SKIPPED }}",
+                      "value": "Total: ${{ env.ALLURE_TOTAL }} | Passed: ${{ env.ALLURE_PASSED }} | Failed: ${{ env.ALLURE_FAILED }} | Broken: ${{ env.ALLURE_BROKEN }} | Flaky: ${{ env.ALLURE_UNKNOWN }} | Skipped: ${{ env.ALLURE_SKIPPED }}",
                       "short": false
                     },
                     {
