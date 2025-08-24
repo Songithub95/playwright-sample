@@ -1,0 +1,1575 @@
+{
+  "config": {
+    "configFile": "/home/runner/work/playwright-sample/playwright-sample/playwright.config.js",
+    "rootDir": "/home/runner/work/playwright-sample/playwright-sample/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "ci": {
+        "commitHref": "https://github.com/Songithub95/playwright-sample/commit/99a0142cad3c68cccdbf23e1e3fd6e4d9e7dc1f9",
+        "commitHash": "99a0142cad3c68cccdbf23e1e3fd6e4d9e7dc1f9",
+        "buildHref": "https://github.com/Songithub95/playwright-sample/actions/runs/17194974483"
+      },
+      "gitCommit": {
+        "shortHash": "99a0142",
+        "hash": "99a0142cad3c68cccdbf23e1e3fd6e4d9e7dc1f9",
+        "subject": "update",
+        "body": "update\n",
+        "author": {
+          "name": "Songithub95",
+          "email": "son.phung.15@gmail.com",
+          "time": 1755750707000
+        },
+        "committer": {
+          "name": "Songithub95",
+          "email": "son.phung.15@gmail.com",
+          "time": 1755750707000
+        },
+        "branch": "main"
+      },
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/runner/work/playwright-sample/playwright-sample/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "ci": {
+            "commitHref": "https://github.com/Songithub95/playwright-sample/commit/99a0142cad3c68cccdbf23e1e3fd6e4d9e7dc1f9",
+            "commitHash": "99a0142cad3c68cccdbf23e1e3fd6e4d9e7dc1f9",
+            "buildHref": "https://github.com/Songithub95/playwright-sample/actions/runs/17194974483"
+          },
+          "gitCommit": {
+            "shortHash": "99a0142",
+            "hash": "99a0142cad3c68cccdbf23e1e3fd6e4d9e7dc1f9",
+            "subject": "update",
+            "body": "update\n",
+            "author": {
+              "name": "Songithub95",
+              "email": "son.phung.15@gmail.com",
+              "time": 1755750707000
+            },
+            "committer": {
+              "name": "Songithub95",
+              "email": "son.phung.15@gmail.com",
+              "time": 1755750707000
+            },
+            "branch": "main"
+          },
+          "actualWorkers": 2
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/runner/work/playwright-sample/playwright-sample/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.52.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "Calendar.spec.js",
+      "file": "Calendar.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Calendar validations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2613,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:14:15.015Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/Calendar-Calendar-validations/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/Calendar-Calendar-validations/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a34bd134fcc3fb0e5fd-c2b523a20fc641b772a7",
+          "file": "Calendar.spec.js",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "ClientApp.spec.js",
+      "file": "ClientApp.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@Webst Client App login",
+          "ok": false,
+          "tags": [
+            "Webst"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30774,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/tests/ClientApp.spec.js",
+                        "column": 47,
+                        "line": 16
+                      },
+                      "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.card-body b').first() to be visible\u001b[22m\n\n\n  14 |    await page.locator(\"[value='Login']\").click();\n  15 |    await page.waitForLoadState('networkidle');\n> 16 |    await page.locator(\".card-body b\").first().waitFor();\n     |                                               ^\n  17 |    const titles = await page.locator(\".card-body b\").allTextContents();\n  18 |    console.log(titles); \n  19 |    const count = await products.count();\n    at /home/runner/work/playwright-sample/playwright-sample/tests/ClientApp.spec.js:16:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:14:15.044Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientApp--Webst-Client-App-login/test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context-1",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientApp--Webst-Client-App-login/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientApp--Webst-Client-App-login/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "756b2e3d635df17cc925-2ea9e338806ee0c84f32",
+          "file": "ClientApp.spec.js",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "ClientAppOtherWay.spec.js",
+      "file": "ClientAppOtherWay.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@Webst Client App login",
+          "ok": false,
+          "tags": [
+            "Webst"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30711,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/tests/ClientAppOtherWay.spec.js",
+                        "column": 47,
+                        "line": 16
+                      },
+                      "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.card-body b').first() to be visible\u001b[22m\n\n\n  14 |    await page.getByRole('button',{name:\"Login\"}).click();\n  15 |    await page.waitForLoadState('networkidle');\n> 16 |    await page.locator(\".card-body b\").first().waitFor();\n     |                                               ^\n  17 |    \n  18 |    await page.locator(\".card-body\").filter({hasText:\"ZARA COAT 3\"})\n  19 |    .getByRole(\"button\",{name:\"Add to Cart\"}).click();\n    at /home/runner/work/playwright-sample/playwright-sample/tests/ClientAppOtherWay.spec.js:16:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:14:17.779Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppOtherWay--Webst-Client-App-login/test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context-1",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppOtherWay--Webst-Client-App-login/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppOtherWay--Webst-Client-App-login/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a984fe491a45d3090f62-10f584fe675f70d4b586",
+          "file": "ClientAppOtherWay.spec.js",
+          "line": 6,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "ClientAppPO.spec.js",
+      "file": "ClientAppPO.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@Webs Client App login for ZARA COAT 3",
+          "ok": false,
+          "tags": [
+            "Webs"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30788,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/pageobjects/DashboardPage.js",
+                        "column": 21,
+                        "line": 38
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n\n   at ../pageobjects/DashboardPage.js:38\n\n  36 | async navigateToCart()\n  37 | {\n> 38 |     await this.cart.click();\n     |                     ^\n  39 | }\n  40 |\n  41 | }\n    at DashboardPage.navigateToCart (/home/runner/work/playwright-sample/playwright-sample/pageobjects/DashboardPage.js:38:21)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/ClientAppPO.spec.js:21:26"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:14:47.238Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO--Webs-Client-App-login-for-ZARA-COAT-3/test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context-1",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO--Webs-Client-App-login-for-ZARA-COAT-3/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO--Webs-Client-App-login-for-ZARA-COAT-3/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8eb22d89bf82429c0323-065050cc59bf41a521ea",
+          "file": "ClientAppPO.spec.js",
+          "line": 11,
+          "column": 2
+        },
+        {
+          "title": "Client App login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30778,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/pageobjects/DashboardPage.js",
+                        "column": 21,
+                        "line": 38
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n\n   at ../pageobjects/DashboardPage.js:38\n\n  36 | async navigateToCart()\n  37 | {\n> 38 |     await this.cart.click();\n     |                     ^\n  39 | }\n  40 |\n  41 | }\n    at DashboardPage.navigateToCart (/home/runner/work/playwright-sample/playwright-sample/pageobjects/DashboardPage.js:38:21)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/ClientAppPO.spec.js:55:26"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:15:19.428Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO-Client-App-login/test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context-1",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO-Client-App-login/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO-Client-App-login/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8eb22d89bf82429c0323-e7ac900fe99cb124e309",
+          "file": "ClientAppPO.spec.js",
+          "line": 45,
+          "column": 2
+        }
+      ]
+    },
+    {
+      "title": "ClientAppPO.spec.ts",
+      "file": "ClientAppPO.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@Webs Client App login for ZARA COAT 3",
+          "ok": false,
+          "tags": [
+            "Webs"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30736,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/pageobjects_ts/DashboardPage.ts",
+                        "column": 21,
+                        "line": 48
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n\n   at ../pageobjects_ts/DashboardPage.ts:48\n\n  46 | async navigateToCart()\n  47 | {\n> 48 |     await this.cart.click();\n     |                     ^\n  49 | }\n  50 |\n  51 | }\n    at DashboardPage.navigateToCart (/home/runner/work/playwright-sample/playwright-sample/pageobjects_ts/DashboardPage.ts:48:21)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/ClientAppPO.spec.ts:23:26"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:14:49.743Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO--Webs-Client-App-login-for-ZARA-COAT-3/test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context-1",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO--Webs-Client-App-login-for-ZARA-COAT-3/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO--Webs-Client-App-login-for-ZARA-COAT-3/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "268c89267ed18b942929-2474327300c6ff8fa64f",
+          "file": "ClientAppPO.spec.ts",
+          "line": 13,
+          "column": 6
+        },
+        {
+          "title": "Client App login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30715,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/pageobjects_ts/DashboardPage.ts",
+                        "column": 21,
+                        "line": 48
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n\n   at ../pageobjects_ts/DashboardPage.ts:48\n\n  46 | async navigateToCart()\n  47 | {\n> 48 |     await this.cart.click();\n     |                     ^\n  49 | }\n  50 |\n  51 | }\n    at DashboardPage.navigateToCart (/home/runner/work/playwright-sample/playwright-sample/pageobjects_ts/DashboardPage.ts:48:21)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/ClientAppPO.spec.ts:58:26"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:15:21.779Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO-Client-App-login/test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context-1",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO-Client-App-login/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/ClientAppPO-Client-App-login/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "268c89267ed18b942929-a8cd6eb8efbb18e32ff4",
+          "file": "ClientAppPO.spec.ts",
+          "line": 48,
+          "column": 11
+        }
+      ]
+    },
+    {
+      "title": "llc.spec.js",
+      "file": "llc.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Playwright Special locators",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3363,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:15:51.629Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/llc-Playwright-Special-locators/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/llc-Playwright-Special-locators/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6c0e4213559a52bdd5ff-cd081c30a1ca0bd83122",
+          "file": "llc.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "MoreValidations.spec.js",
+      "file": "MoreValidations.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@Web Popup validations",
+          "ok": true,
+          "tags": [
+            "Web"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6614,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "13,522\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:15:53.818Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/MoreValidations--Web-Popup-validations/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/MoreValidations--Web-Popup-validations/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0bc5ae184176f7ff71e5-634de3445642e5aacdc0",
+          "file": "MoreValidations.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "Screenshot & Visual comparision",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5529,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:00.928Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/MoreValidations-Screenshot-Visual-comparision/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/MoreValidations-Screenshot-Visual-comparision/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0bc5ae184176f7ff71e5-88dc60460f54f219de50",
+          "file": "MoreValidations.spec.js",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "visual",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:06.772Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/MoreValidations-visual/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/MoreValidations-visual/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0bc5ae184176f7ff71e5-4f63c8b6efa5ab065fe1",
+          "file": "MoreValidations.spec.js",
+          "line": 38,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "NetworkTest.spec.js",
+      "file": "NetworkTest.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@SP Place the order",
+          "ok": false,
+          "tags": [
+            "SP"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 0,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading '0')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at APiUtils.createOrder (/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js:30:49)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/NetworkTest.spec.js:11:14",
+                    "location": {
+                      "file": "/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js",
+                      "column": 49,
+                      "line": 30
+                    },
+                    "snippet": "   at ../utils/APiUtils.js:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[36mconst\u001b[39m orderResponseJson \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m orderResponse\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m         console\u001b[33m.\u001b[39mlog(orderResponseJson)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mconst\u001b[39m orderId \u001b[33m=\u001b[39m orderResponseJson\u001b[33m.\u001b[39morders[\u001b[35m0\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m         response\u001b[33m.\u001b[39morderId \u001b[33m=\u001b[39m orderId\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mreturn\u001b[39m response\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js",
+                        "column": 49,
+                        "line": 30
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading '0')\n\n   at ../utils/APiUtils.js:30\n\n  28 |         const orderResponseJson = await orderResponse.json();\n  29 |         console.log(orderResponseJson);\n> 30 |         const orderId = orderResponseJson.orders[0];\n     |                                                 ^\n  31 |         response.orderId = orderId;\n  32 |\n  33 |         return response;\n    at APiUtils.createOrder (/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js:30:49)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/NetworkTest.spec.js:11:14"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[90mundefined\u001b[39m\n"
+                    },
+                    {
+                      "text": "{ type: \u001b[32m'Invalid'\u001b[39m, message: \u001b[32m'Access denied. No token provided.'\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:15:55.204Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/NetworkTest--SP-Place-the-order/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js",
+                    "column": 49,
+                    "line": 30
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9675ba6f4c097f451ac9-1bc696ef5eebc70a4412",
+          "file": "NetworkTest.spec.js",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "NetworlTest2.spec.js",
+      "file": "NetworlTest2.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@QW Security test request intercept",
+          "ok": false,
+          "tags": [
+            "QW"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30844,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/tests/NetworlTest2.spec.js",
+                        "column": 48,
+                        "line": 12
+                      },
+                      "message": "Error: locator.waitFor: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.card-body b').first() to be visible\u001b[22m\n\n\n  10 |     await page.locator(\"[value='Login']\").click();\n  11 |     await page.waitForLoadState('networkidle');\n> 12 |     await page.locator(\".card-body b\").first().waitFor();\n     |                                                ^\n  13 |\n  14 |     await page.locator(\"button[routerlink*='myorders']\").click();\n  15 |     await page.route(\"https://rahulshettyacademy.com/api/ecom/order/get-orders-details?id=*\",\n    at /home/runner/work/playwright-sample/playwright-sample/tests/NetworlTest2.spec.js:12:48"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:15:57.403Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/NetworlTest2--QW-Security-test-request-intercept/test-failed-1.png"
+                    },
+                    {
+                      "name": "_error-context-1",
+                      "contentType": "text/markdown",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/NetworlTest2--QW-Security-test-request-intercept/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/NetworlTest2--QW-Security-test-request-intercept/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "7dbf9d3b1cd8795a46b9-a2027427ff7da3b73c16",
+          "file": "NetworlTest2.spec.js",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "UIBasicstest.spec.js",
+      "file": "UIBasicstest.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@Web Browser Context-Validating Error login",
+          "ok": true,
+          "tags": [
+            "Web"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7239,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "https://rahulshettyacademy.com/loginpagePractise/\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/loginpagePractise/ \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css\n"
+                    },
+                    {
+                      "text": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js\n"
+                    },
+                    {
+                      "text": "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js\n"
+                    },
+                    {
+                      "text": "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "LoginPage Practise | Rahul Shetty Academy\n"
+                    },
+                    {
+                      "text": "Incorrect username/password.\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/shop\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/shop \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/styles.3476315b83ee14da2595.bundle.css\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/inline.318b50c57b4eba3d437b.bundle.js\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/polyfills.b6b2cd0d4c472ac3ac12.bundle.js\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/scripts.6cc4e781f0791d60b349.bundle.js\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/main.f104fca0d24a938832a3.bundle.js\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/styles.3476315b83ee14da2595.bundle.css \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/inline.318b50c57b4eba3d437b.bundle.js \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/polyfills.b6b2cd0d4c472ac3ac12.bundle.js \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/scripts.6cc4e781f0791d60b349.bundle.js \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/main.f104fca0d24a938832a3.bundle.js \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://placehold.co/900x350\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/iphonex.jpg\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/samsung.jpg\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/nokia.jpg\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/blackberry.jpg\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/Material-Design-Iconic-Font.a4d31128b633bc0b1cc1.woff2?v=2.2.0\n"
+                    },
+                    {
+                      "text": "https://placehold.co/900x350 \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/blackberry.jpg \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/samsung.jpg \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/nokia.jpg \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/assets/img/iphonex.jpg \u001b[33m200\u001b[39m\n"
+                    },
+                    {
+                      "text": "iphone X\n"
+                    },
+                    {
+                      "text": "Samsung Note 8\n"
+                    },
+                    {
+                      "text": "[ \u001b[32m'iphone X'\u001b[39m, \u001b[32m'Samsung Note 8'\u001b[39m, \u001b[32m'Nokia Edge'\u001b[39m, \u001b[32m'Blackberry'\u001b[39m ]\n"
+                    },
+                    {
+                      "text": "https://rahulshettyacademy.com/angularpractice/Material-Design-Iconic-Font.a4d31128b633bc0b1cc1.woff2?v=2.2.0 \u001b[33m200\u001b[39m\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:08.214Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Web-Browser-Context-Validating-Error-login/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Web-Browser-Context-Validating-Error-login/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb103f66695449c85f71-c7b35e9ebd26aeb822bc",
+          "file": "UIBasicstest.spec.js",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "@Web UI Controls",
+          "ok": true,
+          "tags": [
+            "Web"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2538,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33mtrue\u001b[39m\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:15.753Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Web-UI-Controls/test-finished-2.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Web-UI-Controls/test-finished-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Web-UI-Controls/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb103f66695449c85f71-afc852081378d6cf9760",
+          "file": "UIBasicstest.spec.js",
+          "line": 37,
+          "column": 1
+        },
+        {
+          "title": "@Child windows hadl",
+          "ok": true,
+          "tags": [
+            "Child"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3295,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "rahulshettyacademy.com\n"
+                    },
+                    {
+                      "text": "\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:18.492Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Child-windows-hadl/test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Child-windows-hadl/test-finished-2.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Child-windows-hadl/test-finished-3.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/UIBasicstest--Child-windows-hadl/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "fb103f66695449c85f71-40ec69b8a72706d8e57e",
+          "file": "UIBasicstest.spec.js",
+          "line": 57,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "upload-download.spec.js",
+      "file": "upload-download.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Upload download excel validation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 4223,
+                  "error": {
+                    "message": "Error: File not found: /Users/rahulshetty/downloads/download.xlsx",
+                    "stack": "Error: File not found: /Users/rahulshetty/downloads/download.xlsx\n    at XLSX.readFile (/home/runner/work/playwright-sample/playwright-sample/node_modules/exceljs/lib/xlsx/xlsx.js:51:13)\n    at writeExcelTest (/home/runner/work/playwright-sample/playwright-sample/tests/upload-download.spec.js:8:3)",
+                    "location": {
+                      "file": "/home/runner/work/playwright-sample/playwright-sample/tests/upload-download.spec.js",
+                      "column": 3,
+                      "line": 8
+                    },
+                    "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m     \n \u001b[90m  7 |\u001b[39m   \u001b[36mconst\u001b[39m workbook \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mExcelJs\u001b[39m\u001b[33m.\u001b[39m\u001b[33mWorkbook\u001b[39m()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m workbook\u001b[33m.\u001b[39mxlsx\u001b[33m.\u001b[39mreadFile(filePath)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m worksheet \u001b[33m=\u001b[39m workbook\u001b[33m.\u001b[39mgetWorksheet(\u001b[32m'Sheet1'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mconst\u001b[39m output\u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m readExcel(worksheet\u001b[33m,\u001b[39msearchText)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/tests/upload-download.spec.js",
+                        "column": 3,
+                        "line": 8
+                      },
+                      "message": "Error: File not found: /Users/rahulshetty/downloads/download.xlsx\n\n   6 |     \n   7 |   const workbook = new ExcelJs.Workbook();\n>  8 |   await workbook.xlsx.readFile(filePath);\n     |   ^\n   9 |   const worksheet = workbook.getWorksheet('Sheet1');\n  10 |   const output= await readExcel(worksheet,searchText);\n  11 |\n    at XLSX.readFile (/home/runner/work/playwright-sample/playwright-sample/node_modules/exceljs/lib/xlsx/xlsx.js:51:13)\n    at writeExcelTest (/home/runner/work/playwright-sample/playwright-sample/tests/upload-download.spec.js:8:3)"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/tests/upload-download.spec.js",
+                        "column": 3,
+                        "line": 50
+                      },
+                      "message": "Error: ENOENT: no such file or directory, stat '/Users/rahulshetty/downloads/download.xlsx'\n\n  48 |   writeExcelTest(textSearch,updateValue,{rowChange:0,colChange:2},\"/Users/rahulshetty/downloads/download.xlsx\");\n  49 |   await page.locator(\"#fileinput\").click();\n> 50 |   await page.locator(\"#fileinput\").setInputFiles(\"/Users/rahulshetty/downloads/download.xlsx\");\n     |   ^\n  51 |   const textlocator = page.getByText(textSearch);\n  52 |   const desiredRow = await page.getByRole('row').filter({has :textlocator });\n  53 |   await expect(desiredRow.locator(\"#cell-4-undefined\")).toContainText(updateValue);\n    at /home/runner/work/playwright-sample/playwright-sample/tests/upload-download.spec.js:50:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:22.464Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/upload-download-Upload-download-excel-validation/test-failed-3.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/upload-download-Upload-download-excel-validation/test-failed-2.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/upload-download-Upload-download-excel-validation/test-failed-4.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/upload-download-Upload-download-excel-validation/test-failed-1.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/upload-download-Upload-download-excel-validation/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/playwright-sample/playwright-sample/tests/upload-download.spec.js",
+                    "column": 3,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ebb6f72d0457f66f61de-5628e5a0c7741de67504",
+          "file": "upload-download.spec.js",
+          "line": 40,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "WebAPIPart1.spec.js",
+      "file": "WebAPIPart1.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@API Place the order",
+          "ok": false,
+          "tags": [
+            "API"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 0,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading '0')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at APiUtils.createOrder (/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js:30:49)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/WebAPIPart1.spec.js:11:16",
+                    "location": {
+                      "file": "/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js",
+                      "column": 49,
+                      "line": 30
+                    },
+                    "snippet": "   at ../utils/APiUtils.js:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[36mconst\u001b[39m orderResponseJson \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m orderResponse\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m         console\u001b[33m.\u001b[39mlog(orderResponseJson)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mconst\u001b[39m orderId \u001b[33m=\u001b[39m orderResponseJson\u001b[33m.\u001b[39morders[\u001b[35m0\u001b[39m]\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m         response\u001b[33m.\u001b[39morderId \u001b[33m=\u001b[39m orderId\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m         \u001b[36mreturn\u001b[39m response\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js",
+                        "column": 49,
+                        "line": 30
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading '0')\n\n   at ../utils/APiUtils.js:30\n\n  28 |         const orderResponseJson = await orderResponse.json();\n  29 |         console.log(orderResponseJson);\n> 30 |         const orderId = orderResponseJson.orders[0];\n     |                                                 ^\n  31 |         response.orderId = orderId;\n  32 |\n  33 |         return response;\n    at APiUtils.createOrder (/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js:30:49)\n    at /home/runner/work/playwright-sample/playwright-sample/tests/WebAPIPart1.spec.js:11:16"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "\u001b[90mundefined\u001b[39m\n"
+                    },
+                    {
+                      "text": "{ type: \u001b[32m'Invalid'\u001b[39m, message: \u001b[32m'Access denied. No token provided.'\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:28.085Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/WebAPIPart1--API-Place-the-order/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/runner/work/playwright-sample/playwright-sample/utils/APiUtils.js",
+                    "column": 49,
+                    "line": 30
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "2e16e1e8e63bfbf6bb5f-db3c5550f93dfb26a8c6",
+          "file": "WebAPIPart1.spec.js",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "WebAPIPart2.spec.js",
+      "file": "WebAPIPart2.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "@Client App login",
+          "ok": false,
+          "tags": [
+            "Client"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30238,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/home/runner/work/playwright-sample/playwright-sample/tests/WebAPIPart2.spec.js",
+                        "column": 48,
+                        "line": 40
+                      },
+                      "message": "Error: locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('[routerlink*=\\'cart\\']')\u001b[22m\n\n\n  38 |         }\n  39 |     }\n> 40 |     await page.locator(\"[routerlink*='cart']\").click();\n     |                                                ^\n  41 |     await page.locator(\"div li\").first().waitFor();\n  42 |     const bool = await page.locator(\"h3:has-text('ZARA COAT 3')\").isVisible();\n  43 |     expect(bool).toBeTruthy();\n    at /home/runner/work/playwright-sample/playwright-sample/tests/WebAPIPart2.spec.js:40:48"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:16:29.587Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/WebAPIPart2--Client-App-login/test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/WebAPIPart2--Client-App-login/test-failed-2.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/WebAPIPart2--Client-App-login/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "85e95e277fff19008721-40a2b312f84763e2b54e",
+          "file": "WebAPIPart2.spec.js",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "@API Test case 2",
+          "ok": true,
+          "tags": [
+            "API"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4612,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-24T23:17:06.042Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/WebAPIPart2--API-Test-case-2/test-finished-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/WebAPIPart2--API-Test-case-2/test-finished-2.png"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/runner/work/playwright-sample/playwright-sample/test-results/WebAPIPart2--API-Test-case-2/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "85e95e277fff19008721-2ed4e50158d823424cf1",
+          "file": "WebAPIPart2.spec.js",
+          "line": 79,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-24T23:14:14.147Z",
+    "duration": 180999.632,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 11,
+    "flaky": 0
+  }
+}
